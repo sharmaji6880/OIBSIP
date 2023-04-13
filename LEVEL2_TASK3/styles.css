@@ -1,0 +1,189 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: mediumslateblue;
+}
+
+.app {
+    width: 100%;
+    max-width: 400px;
+}
+.addtodos {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.addtodos div {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.addtodos div select {
+    font-size: 1.25rem;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.addtodos textarea {
+    width: 90%;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    font-size: 1.25rem;
+    resize: none;
+    color: #eee;
+    color: #333;
+    border-radius: 2px;
+    border-radius: 10px;
+}
+.addtodos textarea:focus {
+    outline: none;
+}
+.addtodos button {
+    color: white;
+    background: rgb(32, 164, 32);
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    padding: .25em .5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+.addtodos button:hover {
+    background: rgb(26, 135, 26);
+}
+.updatebox {
+    width: 70vw;
+    border: .8px solid rgba(51,49,49,.5);
+    position: fixed;
+    left: 15vw;
+    right: 15vw;
+    display: none;
+    top: 30vh;
+    padding: 20px 10px;
+    background: white;
+}
+.updatebox h2 {
+    text-align: center;
+    margin-bottom: 1rem
+}
+
+.updatebox button {
+    font-size: 1.05rem;
+    padding: .25em .5em;
+    cursor: pointer;
+    transition: all .5s;
+}
+.updatebox div {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.updatebox textarea {
+    width: 90%;
+    display: block;
+    margin: auto;
+    font-size: 1.1rem;
+    padding: 5px;
+    resize: none;
+}
+.text {
+    overflow-wrap: break-word;
+}
+.todos {
+    height: 65vh;
+    overflow-y: auto;
+}
+.todos::-webkit-scrollbar {
+    width: 0;
+}
+
+.complete {
+    position: relative;
+}
+.complete::after {
+    content:"Mark as done";
+    display: none;
+    box-sizing: border-box;
+    font-size: 1rem;
+    border-radius: 2px;
+    overflow: hidden;
+    width: 150px;
+    height: 22px;
+    background: rgb(51,49,49);
+    color: white;
+    position: absolute;
+    bottom: -26px;
+    
+}
+.complete:hover::after {
+    display: block;
+}
+.todo {
+    padding: 10px;
+    border-radius: 1rem;
+    margin-bottom: 50px;
+    position: relative;
+    background: rgba(51,49,49,.3);
+}
+.todo p {
+    color:white;
+    margin-bottom: 1rem;
+}
+.todo button {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: rgb(51,49,49);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+.todo .icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.todo .complete:hover,
+.todo .updatetodo:hover {
+    color: white;
+    background: rgb(51,49,49);
+}
+.todo .deltodo:hover {
+    background: indianred;
+    color: white;
+}
+
+.completed {
+    background: mediumseagreen;
+    
+}
+.completed p {
+    text-decoration: line-through;
+    opacity: .6;
+}
+.completed .updatetodo,.completed .complete {
+    display: none;
+}
