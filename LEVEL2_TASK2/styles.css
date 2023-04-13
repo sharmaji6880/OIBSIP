@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+}
+
+/*CSS FOR SIDEBAR*/
+.sidebar {
+    width: 25%;
+    min-width: 300px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #E5E4E2;
+    background-color: #6baade;
+}
+.sidebar img {
+    width: 80%;
+    border-radius: 30px;
+    margin: 20px 0 30px 0;
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+    transition: scale .7s;
+}
+.sidebar img:hover {
+    scale:1.02;
+}
+.sidebar div {
+    width: 80%;
+    text-align: justify;
+    color: white;
+    color: rgb(51,49,49);
+}
+.sidebar a {
+    color: white;
+    display: none;
+    text-decoration: none;
+}
+.name {
+    text-shadow: 0 0 2px white;
+}
+.about {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s;
+}
+/*CSS FOR SIDEBAR*/
+
+
+.main {
+    width: 75%;
+    height: 100vh;
+    overflow: auto;
+}
+.visible {
+    height: 220px;
+}
+
+/*CSS FOR Club_career*/
+
+.club_career {
+    min-height: 100vh;
+}
+.club_career h2 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2.5rem;
+    color: #1C2C5B;
+}
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:2rem 5rem;
+    padding-top: 20px;
+}
+.card {
+    width: 300px;
+    height: 300px;
+    background: rgba(108, 171, 221,.2);
+    border-radius: 8px;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card span {
+    padding-left: 10px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.card img {
+    width: 70%;
+    display: block;
+    margin: auto;
+    transition: scale .5s;
+}
+.card:hover img {
+    scale: 1.05;
+}
+/*CSS FOR Club_career*/
+
+/*Designing the Scrollbar*/
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(107, 170, 222,.3);
+}
+::-webkit-scrollbar-thumb {
+    background: #6baade;
+    border-radius: 20px;
+}
+/*Designing the Scrollbar*/
+
+
+/*CSS For Stats*/
+.stats {
+    min-height: 100vh;
+}
+.stats_container {
+    height: calc(100vh - 101px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 4rem 3.33%;
+}
+.stats h2 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2.5rem;
+    color: #1C2C5B;
+    padding: 20px 0;
+}
+.stats_container div {
+    width: 30%;
+    position: relative;
+    padding: 0 10px;
+}
+.stats_container div p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    border-top: 2px solid lightgray;
+    border-bottom:2px solid lightgray;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+.stats_container div::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(to right,mediumslateblue,deeppink,blueviolet)
+}
+.stats_container div::before {
+    top: -10px;
+}
+/*CSS For Stats*/
