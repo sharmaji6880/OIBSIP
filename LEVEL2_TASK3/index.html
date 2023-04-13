@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Dos List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+
+      <!--App Header-->
+      <div class="header">
+        <h1 class="app_title" style="text-align: center">To Dos Application</h1>
+      </div>
+      <!--App Header-->
+
+
+      <!--Add Todo Form-->
+      <form action="" class="addtodos">
+        <textarea name="todo" rows="2" placeholder="Enter something..."></textarea>
+        <div>
+          <button class="addtodo" type="button">Add Todo</button>
+          <select class="filter">
+            <option value="All">All</option>
+            <option value="Complete">Complete</option>
+            <option value="Incomplete">Incomplete</option>
+          </select>
+        </div>
+      </form>
+      <!--AddTodo Form-->
+
+      <!--Todos Container-->
+      <div class="todos">
+        
+      </div>
+      <!--Todos Container-->
+    </div>
+
+    <!--Update Todo Form-->
+    <form action="" class="updatebox">
+      <h2>Update your todo</h2>
+      <textarea name="updatebox_input" rows="5"></textarea>
+      <div>
+        <button type="button" class="update_btn">Update</button>
+        <button type="button" class="cancel_btn">Cancel</button>
+      </div>
+    </form>
+    <!--Update Todo Form-->
+
+
+    <script src="logic.js"></script>
+  </body>
+</html>
